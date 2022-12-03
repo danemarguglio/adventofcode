@@ -18,7 +18,7 @@ def largest_nsum(input_file: Path, n: int) -> int:
 
     
 if __name__ == "__main__":
-    input_file = Path("../data/puzzle_1.txt")
+    input_file = Path("../input/input_1.txt")
 
     part1 = largest_nsum(input_file, 1)
     part2 = largest_nsum(input_file, 3)
