@@ -2,7 +2,7 @@ from pathlib import Path
 
 
 # A Rock - B Paper - C Scissor
-# { opponent_move move: Winning move }
+# { Opponent Move : Winning move }
 winning_move = {
     'a': 'b',
     'b': 'c',
@@ -10,7 +10,7 @@ winning_move = {
 }
 
 # Score = [ Lose = 0 . Draw = 3 . Win = 6] + Value of move]
-move_value = {'a': 1, 'b': 2, 'c': 3}
+move_values = {'a': 1, 'b': 2, 'c': 3}
 
 
 def evaluate_line_part1(line: str) -> int:
@@ -36,7 +36,7 @@ def evaluate_line_part1(line: str) -> int:
     else:
         score = 0
     
-    return score + move_value[my_move]
+    return score + move_values[my_move]
 
 
 def evaluate_line_part2(line: str) -> int:
@@ -60,7 +60,7 @@ def evaluate_line_part2(line: str) -> int:
     else:
         my_move = winning_move[opponent_move]
         score = 6
-    return score + move_value[my_move]
+    return score + move_values[my_move]
           
 
 if __name__ == "__main__":
