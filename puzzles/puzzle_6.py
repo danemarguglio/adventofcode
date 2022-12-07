@@ -1,8 +1,5 @@
 from pathlib import Path
-from typing import List
-import re
 from collections import deque
-
 
 
 class StreamReader:
@@ -11,7 +8,7 @@ class StreamReader:
         self.buffer = deque()
         self.packet_marker = packet_marker
 
-    def read_char(self, c):
+    def read_char(self, c: str) -> int:
         # Not enough characters to sync
         if len(self.buffer) < self.packet_marker:
             self.buffer.append(c)
