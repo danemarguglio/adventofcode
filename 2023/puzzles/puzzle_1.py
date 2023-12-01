@@ -3,7 +3,6 @@ from typing import List
 
 
 
-
 DIGITS = {
     'one': 1,
     'two': 2,
@@ -63,22 +62,22 @@ def get_calibration_2(line: str) -> int:
     return 10*ints[0][1] + ints[-1][1]
 
 """ Part 1: Find the sum of all calibrations in the input file """
-def part_1(lines) -> int:
+def part_1(lines: List[str]) -> int:
     return sum([get_calibration(line) for line in lines])
 
 
 """ Part 2: Same thing but with string numbers too """
-def part_2(lines):
+def part_2(lines: List[str]) -> int:
     return sum([get_calibration_2(line) for line in lines])
 
 
-assert(get_calibration('1any_thing_here_1_2_9') == 19)
-assert(get_calibration('19one') == 19)
-assert(get_calibration('1') == 11)
-assert(get_calibration_2('19one') == 11)
-assert(get_calibration_2('eightwo') == 82)
+if __name__ == "__main__":
+    assert(get_calibration('1any_thing_here_1_2_9') == 19)
+    assert(get_calibration('19one') == 19)
+    assert(get_calibration('1') == 11)
+    assert(get_calibration_2('19one') == 11)
+    assert(get_calibration_2('eightwo') == 82)
 
-
-lines = load_input_file(1)
-print(f"Part 1: {part_1(lines)}")
-print(f"Part 2: {part_2(lines)}")
+    lines = load_input_file(1)
+    print(f"Part 1: {part_1(lines)}")
+    print(f"Part 2: {part_2(lines)}")
