@@ -1,5 +1,5 @@
 from util import load_input_file
-from typing import List, Set, Tuple, Optional
+from typing import List
 
 
 class Card:
